@@ -1,0 +1,53 @@
+/* JSONP CSS */
+
+h2{font-weight: bold; color: navy; font-style:italic; text-align: center;}
+li {text-decoration: none; border: thin solid blue; padding: 10px; background: gainsboro; 
+		list-style-type: none; text-align: center; font-size: 1.75em; font-weight: bold;
+		margin: 5px 10px 15px -15px;}
+
+.gridArea {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+		"cityLabel dataCity"
+		"tempLabel dataTemp"
+		"windLabel dataWind"
+		"humLabel dataHum"
+		"pressLabel dataPress"
+	;
+	grid-gap: 5px;
+}
+
+hr {border: thick solid navy;}
+
+.cityLabel {grid-area: cityLabel;}
+.tempLabel {grid-area: tempLabel;}
+.windLabel {grid-area: windLabel;}
+.humLabel {grid-area: humLabel;}
+.pressLabel {grid-area: pressLabel;}
+
+.dataCity {grid-area: dataCity;}
+.dataTemp {grid-area: dataTemp;}
+.dataWind {grid-area: dataWind;}
+.dataHum {grid-area: dataHum;}
+.dataPress {grid-area: dataPress;}
+
+.formatLabel {font-size: 1.5em; font-style: italic; color: navy; text-align: center;}
+.formatData {font-size: 1.5em; font-weight: bold; color: navy;}
+
+@media screen and (orientation: portrait) {
+	.gridArea {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+			"cityLabel" "dataCity"
+			"tempLabel" "dataTemp"
+			"windLabel" "dataWind"
+			"humLabel" "dataHum"
+			"pressLabel" "dataPress"
+		;
+		grid-gap: 5px;
+	}	
+	.formatLabel {font-size: 2em; font-style: italic; color: navy; text-align: center; margin-bottom: 10px;}
+	.formatData {font-size: 2em; font-weight: bold; color: navy; text-align: center; margin-bottom: 40px;} 
+}
